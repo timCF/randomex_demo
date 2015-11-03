@@ -8,8 +8,14 @@ defmodule RandomexDemo do
 
 	spawn_link(fn ->
 		:timer.sleep(1000)
-		[_|args] = System.argv
-		RandomexDemo.Main.main(args)
+		try do
+			[_|args] = System.argv
+			RandomexDemo.Main.main(args)
+		catch
+			error -> IO.inspect("RUNTIME ERROR #{inspect error}")
+		rescue
+			error -> IO.inspect("RUNTIME ERROR #{inspect error}")
+		end
 		:erlang.halt
 	end)
 
