@@ -1,0 +1,5 @@
+%{"exactor": {:git, "https://github.com/sasa1977/exactor.git", "0467f8100bc735405d597dbf94996195eb31e0b6", [tag: "0467f8100bc735405d597dbf94996195eb31e0b6"]},
+  "hashex": {:git, "https://github.com/timCF/hashex.git", "d10a5f3e724e7be016c9ff7420ef5eb3780c3dae", []},
+  "maybe": {:git, "https://github.com/timCF/maybe.git", "d6abda4fe223d23351c6c388a9738f81454a5ec8", []},
+  "randomex": {:git, "https://github.com/veryevilzed/randomex.git", "581048e110678df018a6a5f54ed7517a6f4d1adc", []},
+  "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "67b97620fb133562be6ac07035f2ba2864cac6d6", []}}
