@@ -42,17 +42,21 @@ defmodule RandomexDemo.Main do
 	defp generate(fullopts = %{ranges: ranges, samples: samples, sets: sets}) do
 		unixtime = now |> Integer.to_string
 		filename = "#{@output_dir}/#{unixtime}.txt"
+		File.touch!(filename)
+		{:ok, io} = :file.open(filename, [:write, :append])
 		Enum.each(ranges, fn(this_range) ->
-			Enum.each(1..sets, fn(_) ->
+			Enum.each(1..sets, fn(this_set) ->
 				Enum.each(samples, fn(this_sample) ->
-					IO.puts("range #{ this_range } sample #{ this_sample }")
+					IO.puts("handle range #{ this_range } sample #{ this_sample } set #{ this_set }")
 					Enum.each(1..this_sample, fn(_) ->
-						File.write!(filename, "#{Randomex.range(0, this_range) |> Integer.to_string }\n", [:append])
+						:ok = :file.write(io, "#{Randomex.range(0, this_range) |> Integer.to_string }\n")
 					end)
 				end)
 			end)
 		end)
-		File.write!(@index_file, "#{unixtime} : #{inspect fullopts}\n", [:append])
+		:ok = :file.sync(io)
+		:ok = :file.close(io)
+		File.write!(@index_file, "#{unixtime} : #{Jazz.encode!(fullopts)}\n", [:append])
 		IO.puts("DONE")
 	end
 	defp now do

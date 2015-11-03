@@ -6,6 +6,13 @@ defmodule RandomexDemo do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+	spawn_link(fn ->
+		:timer.sleep(1000)
+		[_|args] = System.argv
+		RandomexDemo.Main.main(args)
+		:erlang.halt
+	end)
+
     children = [
       # Define workers and child supervisors to be supervised
       # worker(RandomexDemo.Worker, [arg1, arg2, arg3]),

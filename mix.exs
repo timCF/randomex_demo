@@ -7,7 +7,7 @@ defmodule RandomexDemo.Mixfile do
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-	 escript: [main_module: RandomexDemo.Main],  # <- add this line
+	 escript: [main_module: RandomexDemo.Main, embed_elixir: true],
      deps: deps]
   end
 
@@ -18,7 +18,10 @@ defmodule RandomexDemo.Mixfile do
     [applications: 	[
 						:logger,
 						:randomex,
-						:maybe
+						:maybe,
+						:exrm,
+						:crypto,
+						:jazz
 					],
      mod: {RandomexDemo, []}]
   end
@@ -35,7 +38,9 @@ defmodule RandomexDemo.Mixfile do
   defp deps do
     [
 		{:randomex, github: "veryevilzed/randomex"},
-		{:maybe, github: "timCF/maybe"}
+		{:maybe, github: "timCF/maybe"},
+		{:exrm, github: "bitwalker/exrm"},
+		{:jazz, github: "meh/jazz"}
 	]
   end
 end
