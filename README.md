@@ -17,8 +17,8 @@ tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux/output$ ls
 1446760892646954.txt  index.txt
 ```
 
-Compile escript
----------------
+Compile
+-------
 
 This way, you can compile app from sources. Requires erlang, elixir, gcc, g++
 
