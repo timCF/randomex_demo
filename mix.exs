@@ -4,7 +4,7 @@ defmodule RandomexDemo.Mixfile do
   def project do
     [app: :randomex_demo,
      version: "0.0.1",
-     elixir: "~> 1.1",
+     #elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
 	 escript: [main_module: RandomexDemo.Main, embed_elixir: true],
