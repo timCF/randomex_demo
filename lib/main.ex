@@ -45,8 +45,8 @@ defmodule RandomexDemo.Main do
 		File.touch!(filename)
 		{:ok, io} = :file.open(filename, [:write, :append])
 		Enum.each(ranges, fn(this_range) ->
-			Enum.each(1..sets, fn(this_set) ->
-				Enum.each(samples, fn(this_sample) ->
+			Enum.each(samples, fn(this_sample) ->
+				Enum.each(1..sets, fn(this_set) ->
 					IO.puts("handle range #{ this_range } sample #{ this_sample } set #{ this_set }")
 					Enum.each(1..this_sample, fn(_) ->
 						:ok = :file.write(io, "#{Randomex.range(0, this_range) |> Integer.to_string }\n")
@@ -60,7 +60,7 @@ defmodule RandomexDemo.Main do
 		IO.puts("DONE")
 	end
 	defp now do
-		{a, b, c} = :erlang.timestamp
+		{a, b, c} = :os.timestamp
 		a*1000000000000 + b*1000000 + c
 	end
 
