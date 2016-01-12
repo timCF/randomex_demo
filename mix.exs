@@ -21,7 +21,9 @@ defmodule RandomexDemo.Mixfile do
 						:maybe,
 						:exrm,
 						:crypto,
-						:jazz
+						:jazz,
+						:exutils,
+						:excards
 					],
      mod: {RandomexDemo, []}]
   end
@@ -37,10 +39,12 @@ defmodule RandomexDemo.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-		{:randomex, github: "veryevilzed/randomex"},
+		{:randomex, github: "timCF/randomex"},
 		{:maybe, github: "timCF/maybe"},
 		{:exrm, github: "bitwalker/exrm"},
-		{:jazz, github: "meh/jazz"}
+		{:jazz, github: "meh/jazz"},
+		{:exutils, github: "timCF/exutils"},
+		{:excards, github: "timCF/excards"}
 	]
   end
 end
