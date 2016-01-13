@@ -29,7 +29,7 @@ defmodule RandomexDemo.Main do
 		res = String.split(bin,",") |> Enum.map(&Maybe.to_integer/1)
 		case Enum.all?(res, &(is_integer(&1) and (&1 > 0))) do
 			true -> {:cont, Map.put(acc, key, res)}
-			false -> {:halt, {:error, "ERROR , every integer in #{key} must be > 0 , integers must be comma-separated , incorrect arg #{bin}"}}
+			false -> {:halt, {:error, "ERROR , every integer in #{Atom.to_string(key)} must be > 0 , integers must be comma-separated , incorrect arg #{bin}"}}
 		end
 	end
 	defp parse_proc({key, bin}, acc) when is_binary(bin) and (key in [:diehard, :sets, :decks, :cards, :ball_min, :ball_max, :ball_num, :spin_num]) do
@@ -96,7 +96,7 @@ defmodule RandomexDemo.Main do
 		this_deck = Excards.Deck.new(cards)
 		Enum.each(1..decks, fn(_) ->
 			bin =	Excards.Deck.shuffle(this_deck)
-					|> Stream.map(fn(%Excards{suit: suit, value: value}) -> inspect(suit)<>"_"<>inspect(value) end)
+					|> Stream.map(fn(%Excards{suit: suit, value: value}) -> Atom.to_string(suit)<>"_"<>Atom.to_string(value) end)
 					|> Enum.join(" ")
 			:ok = :file.write(io, bin<>"\n")
 			:ok = IO.puts(bin)
@@ -105,11 +105,9 @@ defmodule RandomexDemo.Main do
 
 	defp generate_balls(%{ball_min: min, ball_max: max, ball_num: num, spin_num: spin_num}, io) do
 		Enum.each(1..spin_num, fn(_) ->
-			bin = 	Enum.reduce(1..num, {Enum.to_list(min..max), []}, fn(_, {from,to}) ->
-						[el|rest_from] = Enum.shuffle(from)
-						{rest_from, [el|to]}
-					end)
-					|> elem(1)
+			bin =	Enum.to_list(min..max)
+					|> Randomex.shuffle
+					|> Enum.take(num)
 					|> Enum.join(" ")
 			:ok = :file.write(io, bin<>"\n")
 			:ok = IO.puts(bin)

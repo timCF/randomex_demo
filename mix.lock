@@ -11,7 +11,7 @@
   "maybe": {:git, "https://github.com/timCF/maybe.git", "8698af79fb6e34c89e1f636a0bfd5b7f38a10783", []},
   "providers": {:hex, :providers, "1.4.1"},
   "quickrand": {:hex, :quickrand, "1.5.1"},
-  "randomex": {:git, "https://github.com/timCF/randomex.git", "f14e66349798b369edecd51a1c70dd7b7b6a7bb3", []},
+  "randomex": {:git, "https://github.com/timCF/randomex.git", "45b2ba5c62681ee03e70bb06136299f578625e97", []},
   "relx": {:hex, :relx, "3.5.0"},
-  "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "b357439b4a096711fe09a7d062c8fdd6921704d6", []},
+  "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "3ab68ec2e6cfad10f0bcf73077918b2f3b3b7762", []},
   "uuid": {:git, "https://github.com/okeuday/uuid.git", "b2a42be011400bc182e5b0bb68cdc7e4084d13e7", []}}
