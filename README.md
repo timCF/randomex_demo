@@ -25,14 +25,19 @@ Use pre-builded release
 This way you can run it without elixir / erlang in your system. There are builds for linux and mac.
 
 ```
-tim@tim-VirtualBox:~/tmp$ git clone https://github.com/timCF/randomex_demo
-tim@tim-VirtualBox:~/tmp$ cd randomex_demo/releases/linux/
-tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux$ tar zxf ./randomex_demo_64bit.tar.gz
-tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux$ ./bin/randomex_demo console --ranges 32,111 --samples 500,1000,1500 --sets 1
-tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux$ ./bin/randomex_demo console --diehard 10000000
-tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux$ cd output/
-tim@tim-VirtualBox:~/tmp/randomex_demo/releases/linux/output$ ls
-1446760892646954.txt  1446760892786954.txt  index.txt
+~ $ wget https://github.com/timCF/randomex_demo/releases/download/0.0.1/linux64bit.tar.gz
+~ $ tar zxf ./linux64bit.tar.gz
+~ $ ./bin/randomex_demo console --ranges 32,111 --samples 500,1000,1500 --sets 1
+~ $ ./bin/randomex_demo console --diehard 10000000
+~ $ ./bin/randomex_demo console --decks 1000 --cards 36
+~ $ ./bin/randomex_demo console --ball-min 1 --ball-max 80 --ball-num 20 --spin-num 1000
+~ $ ls ./output/
+1452701335999535.txt  1452701387010760.txt  1452701420327234.txt  1452701450936883.txt  index.txt
+~ $ cat ./output/index.txt
+1452701335999535 : {"ranges":[32,111],"samples":[500,1000,1500],"sets":1}
+1452701387010760 : {"diehard":10000000}
+1452701420327234 : {"cards":36,"decks":1000}
+1452701450936883 : {"ball_max":80,"ball_min":1,"ball_num":20,"spin_num":1000}
 ```
 
 Compile
