@@ -41,7 +41,7 @@ defmodule RandomexDemo.Mixfile do
     [
 		{:randomex, github: "timCF/randomex"},
 		{:maybe, github: "timCF/maybe"},
-		{:exrm, github: "bitwalker/exrm"},
+		{:exrm, github: "bitwalker/exrm", tag: "0.19.9"},
 		{:jazz, github: "meh/jazz"},
 		{:exutils, github: "timCF/exutils"},
 		{:excards, github: "timCF/excards"}
