@@ -1,13 +1,20 @@
 # RandomexDemo
 
-Demo for [randomex](https://github.com/veryevilzed/randomex) generator. This console application gives output to stdout and to files. Indexed files are in ./output dir. Some flags to generate specific output :
+Demo for [randomex](https://github.com/timCF/randomex) generator. This console application gives output to stdout and to files. Indexed files are in ./output dir. Some flags to generate specific output :
 
 ```
 --ranges --samples --sets : generates stdout and text file with given params
 
 --diehard : generates binary file for diehard tests with given number of integers (diehard > 0)
 --decks --cards : generates stdout and text file for card games (decks > 0 , cards = 24 | 32 | 36 | 52 | 54)
---ball_min --ball_max --ball_num --spin_num : generates stdout and text file for keno games
+--ball-min --ball-max --ball-num --spin-num : generates stdout and text file for bingo/keno-like games
+```
+
+Example for dieharder tests
+
+```
+mix run -e "" --no-halt console --diehard 100000000
+dieharder -f ./output/1452697128384077.txt -g 201 -a
 ```
 
 Builds for mac and linux. There are few ways to run it.
