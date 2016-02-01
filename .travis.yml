@@ -16,5 +16,5 @@ script:
 - wget https://github.com/timCF/cibash/archive/0.0.3.tar.gz
 - tar xvzf ./0.0.3.tar.gz
 - echo "START elixir build script"
-- "./cibash-0.0.3/elixir_yandex.sh randomex_demo randomex_demo rel"
+- "./cibash-0.0.3/elixir_yandex.sh randomex_demo randomex_demo_rel rel"
 - echo "END elixir build script"

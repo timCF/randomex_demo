@@ -1,5 +1,7 @@
 # RandomexDemo
 
+[![Build Status](https://travis-ci.org/timCF/randomex_demo.svg?branch=master)](https://travis-ci.org/timCF/randomex_demo)
+
 Demo for [randomex](https://github.com/timCF/randomex) generator. This console application gives output to stdout and to files. Indexed files are in ./output dir. Some flags to generate specific output :
 
 ```
