@@ -13,7 +13,7 @@
   "neotoma": {:hex, :neotoma, "1.7.3"},
   "providers": {:hex, :providers, "1.4.1"},
   "quickrand": {:hex, :quickrand, "1.5.1"},
-  "randomex": {:git, "https://github.com/timCF/randomex.git", "45b2ba5c62681ee03e70bb06136299f578625e97", []},
+  "randomex": {:git, "https://github.com/timCF/randomex.git", "5f9872da9217c937673710b6a71f35adb1bded45", []},
   "relx": {:hex, :relx, "3.5.0"},
-  "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "3ab68ec2e6cfad10f0bcf73077918b2f3b3b7762", []},
+  "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "3ab68ec2e6cfad10f0bcf73077918b2f3b3b7762", [branch: "next"]},
   "uuid": {:git, "https://github.com/okeuday/uuid.git", "b2a42be011400bc182e5b0bb68cdc7e4084d13e7", []}}
