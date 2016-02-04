@@ -26,16 +26,16 @@ mix run -e "" --no-halt console --diehard 100000000 --write-to-file true --stdou
 dieharder -f ./output/1452697128384077.txt -g 201 -a
 ```
 
-Builds for mac and linux. There are few ways to run it.
+There are few ways to run randomex_demo.
 
 Use pre-builded release
 -----------------------
 
-This way you can run it without elixir / erlang in your system. There are builds for linux and mac.
+This way you can run it without elixir / erlang in your system. [Here](https://yadi.sk/d/wunDCfMjo5SmK) is pre-builded release for 64-bit linux called 'randomex_demo_release_linux.tar.gz'. Download this package and then :
 
 ```
-~ $ wget https://github.com/timCF/randomex_demo/releases/download/0.0.1/linux64bit.tar.gz
-~ $ tar zxf ./linux64bit.tar.gz
+~ $ tar zxfv ./randomex_demo_release_linux.tar.gz
+~ $ cd ./randomex_demo_release_linux
 ~ $ ./bin/randomex_demo console --ranges 32,111 --samples 500,1000,1500 --sets 1 --write-to-file true --stdout false
 ~ $ ./bin/randomex_demo console --diehard 10000000 --write-to-file true --stdout false
 ~ $ ./bin/randomex_demo console --decks 1000 --cards 36 --write-to-file true --stdout false
