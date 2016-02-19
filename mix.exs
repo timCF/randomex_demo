@@ -39,7 +39,7 @@ defmodule RandomexDemo.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-		{:randomex, github: "timCF/randomex"},
+		{:randomex, github: "veryevilzed/randomex"},
 		{:maybe, github: "timCF/maybe"},
 		{:exrm, github: "bitwalker/exrm", tag: "0.19.9"},
 		{:jazz, github: "meh/jazz"},

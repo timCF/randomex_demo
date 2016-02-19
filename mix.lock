@@ -2,7 +2,7 @@
   "conform": {:hex, :conform, "0.17.0"},
   "erlware_commons": {:hex, :erlware_commons, "0.15.0"},
   "exactor": {:git, "https://github.com/sasa1977/exactor.git", "0467f8100bc735405d597dbf94996195eb31e0b6", [tag: "0467f8100bc735405d597dbf94996195eb31e0b6"]},
-  "excards": {:git, "https://github.com/timCF/excards.git", "9aa199be7d972f29d95a71cc2e50d18cb0ae1b6e", []},
+  "excards": {:git, "https://github.com/timCF/excards.git", "153f93edcbd2de51b6ef3fc928f4cee4f5f8fbea", []},
   "exrm": {:git, "https://github.com/bitwalker/exrm.git", "ba7596cdc9f303708d7279b223408c19219c2ca3", [tag: "0.19.9"]},
   "extask": {:git, "https://github.com/timCF/extask.git", "691cc1a515750bead8b81ed6c13cddbcf115d754", []},
   "exutils": {:git, "https://github.com/timCF/exutils.git", "82ce0270cf95d36d41660154a7daa4450fd9d614", []},
@@ -13,7 +13,7 @@
   "neotoma": {:hex, :neotoma, "1.7.3"},
   "providers": {:hex, :providers, "1.4.1"},
   "quickrand": {:hex, :quickrand, "1.5.1"},
-  "randomex": {:git, "https://github.com/timCF/randomex.git", "221c8d485c91f8e8406a6df5cdcf4b14757684e4", []},
+  "randomex": {:git, "https://github.com/veryevilzed/randomex.git", "f015b08c06e9495102ac7d172bfad74f35297f4a", []},
   "relx": {:hex, :relx, "3.5.0"},
   "sfmt": {:git, "https://github.com/jj1bdx/sfmt-erlang.git", "f9fbc7a507df28433c6bf9d5ee890d189528d6be", []},
   "uuid": {:git, "https://github.com/okeuday/uuid.git", "80cd98fe28c2865711bde99d5a6e245434b1698b", []}}
